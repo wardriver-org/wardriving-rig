@@ -54,10 +54,24 @@ Keep the car socket's rated load within its vehicle-manual limit, including othe
 
 ## Get started
 
-1. Follow [Kali and Kismet setup](kali-kismet.md).
-2. Run `bash inspect-rig.sh` to identify interfaces and drivers locally.
-3. Adapt [the commented configuration template](kismet_site.conf.example).
-4. Complete the [hardware validation checklist](validation.md).
+Plug in the rig and keep Internet access on the laptop's internal Wi-Fi or Ethernet. From this repository directory, run the [Kali setup wizard](setup-kali-rig.sh):
+
+```bash
+sudo bash setup-kali-rig.sh
+sudo wardriver start
+```
+
+Select each USB radio, its survey band, the StarTech Bluetooth controller, and the VFAN GPS serial path when prompted. Open <http://127.0.0.1:2501> and verify all sources and the GPS position.
+
+```bash
+sudo wardriver status
+sudo wardriver logs
+sudo wardriver stop
+```
+
+Captures are saved to `/var/lib/wardriver/captures`. See [setup instructions, troubleshooting, and rollback](KALI-RIG-README.txt). The script passed Bash syntax and channel-parser checks; hardware validation is pending.
+
+For manual setup, follow [Kali and Kismet setup](kali-kismet.md), use `bash inspect-rig.sh` to identify devices, and adapt [the configuration template](kismet_site.conf.example). Complete the [hardware validation checklist](validation.md) before a survey.
 
 **The band assignments are targets, not measured results.** No capture logs or runtime tests from this laptop have been supplied yet. In particular, Wi-Fi 6E hardware does not by itself prove working 6 GHz monitor capture on the installed kernel/firmware.
 
@@ -81,3 +95,4 @@ Capture with Kismet → retain the original logs locally → export a format sup
 - [Publishing this repository](publishing.md).
 
 Capture databases, GPS tracks, credentials, and local device reports belong outside Git. The included `.gitignore` excludes common capture and local configuration files.
+
