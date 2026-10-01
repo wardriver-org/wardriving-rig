@@ -10,19 +10,23 @@ My current hardware and planned wiring for a Kali Linux wardriving laptop: three
 
 ## The setup
 
-| Component | Hardware | Role |
-| --- | --- | --- |
-| Laptop | Dell Latitude 5320, i5-1135G7, 8 GB RAM, 256 GB NVMe, 13.3″ FHD | Kali Linux + Kismet |
-| USB hub | Anker 7-in-1: 2× USB-A data, 1× USB-C data, PD-IN, HDMI, SD/microSD | Connects the three Wi-Fi radios |
-| Wi-Fi radio 1 | ALFA **AWUS036AC — model label needs confirmation** | Planned 2.4 GHz survey |
-| Wi-Fi radio 2 | ALFA AWUS1900, four stock antennas | Planned 5 GHz survey |
-| Wi-Fi radio 3 | ALFA AWUS036AXML, two stock tri-band antennas | Planned 6 GHz survey, subject to driver/channel support |
-| External antennas | Two Bingfu magnetic-base 2.4/5 GHz antennas | Planned on radio 1 after connector/model check |
-| Bluetooth | StarTech Bluetooth 5.3 Class 1 USB adapter; AV53C1 model identified in planning | Bluetooth/BLE discovery |
-| GPS | VFAN USB GPS puck, listed UBX-G7020KT receiver | Position through gpsd |
-| Vehicle power | Existing Anker Nano 167.5W car charger, USB-C1 up to 100W | Hub PD input |
-| Wall power | Purchased Anker Prime 100W USB-C charger | Hub PD input from AC |
-| Power cable | USB-C to USB-C | Verify 5A/e-marked 100W or 240W rating |
+| Component | Hardware | Role | Amazon | Price (USD) |
+| --- | --- | --- | --- | --- |
+| Laptop | Dell Latitude 5320, i5-1135G7, 8 GB RAM, 256 GB NVMe, 13.3″ FHD | Kali Linux + Kismet | [Search exact configuration](https://www.amazon.com/s?k=Dell+Latitude+5320+i5-1135G7+8GB+256GB) | Varies by condition/configuration |
+| USB hub | Anker 7-in-1: 2× USB-A data, 1× USB-C data, PD-IN, HDMI, SD/microSD | Connects the three Wi-Fi radios | [Owner’s link](https://a.co/d/0bJluWtu) | Check listing |
+| Wi-Fi radio 1 | ALFA **AWUS036AC — model label needs confirmation** | Planned 2.4 GHz survey | [AWUS036AC — confirm model](https://www.amazon.com/dp/B01B33WU82) | Check listing |
+| Wi-Fi radio 2 | ALFA AWUS1900, four stock antennas | Planned 5 GHz survey | [View on Amazon](https://www.amazon.com/dp/B01MZD7Z76) | Check listing |
+| Wi-Fi radio 3 | ALFA AWUS036AXML, two stock tri-band antennas | Planned 6 GHz survey, subject to driver/channel support | [View on Amazon](https://www.amazon.com/dp/B0BY8GMW32) | $59.99 reference¹ |
+| External antennas | Two Bingfu magnetic-base 2.4/5 GHz antennas | Planned on radio 1 after connector/model check | [View on Amazon](https://www.amazon.com/dp/B07MYXG3W8) | Check listing |
+| Bluetooth | StarTech Bluetooth 5.3 Class 1 USB adapter; AV53C1 model identified in planning | Bluetooth/BLE discovery | [View on Amazon](https://www.amazon.com/dp/B0F1G6XT38) | Check listing |
+| GPS | VFAN USB GPS puck, listed UBX-G7020KT receiver | Position through gpsd | [View on Amazon](https://www.amazon.com/dp/B073P3Y48Q) | Check listing |
+| Vehicle power | Existing Anker Nano 167.5W car charger, USB-C1 up to 100W | Hub PD input | [View on Amazon](https://www.amazon.com/dp/B0CZ7BL16W) | Check listing |
+| Wall power | Purchased Anker Prime 100W USB-C charger | Hub PD input from AC | [A2688 — confirm variant](https://www.amazon.com/dp/B0CZ6LXL8R) | Check listing |
+| Power cable | USB-C to USB-C | Verify 5A/e-marked 100W or 240W rating | [Search 5A cables](https://www.amazon.com/s?k=USB+C+100W+5A+e-marked+cable) | Exact cable not specified |
+
+**Price lookup: October 1, 2026.** These are regular, non-affiliate Amazon links. [AmazonSmile ended February 20, 2023](https://www.aboutamazon.com/news/company-news/amazon-closing-amazonsmile-to-focus-its-philanthropic-giving-to-programs-with-greater-impact). Prices vary by seller, condition, shipping destination, tax, and promotions. “Check listing” means a price could not be verified from the retrieved Amazon page; it does not mean the item is unavailable. Search links are labeled and do not identify the exact purchased item.
+
+¹ The AXML’s $59.99 reference price appeared in an [Amazon related-product offer](https://www.amazon.com/ALFA-AWUS036AXM-Adapter-Tri-Band-Wireless/dp/B0C7VLCK7V) for ASIN B0BY8GMW32, sold by SHALSOFT, in indexed content retrieved during this lookup. It is not a live checkout quote or the owner’s purchase price. No total is shown because the other prices are unverified.
 
 The first radio was originally written as **AWUS03BAC**. AWUS036AC is the working assumption from the build discussion, not a confirmed label. Check the actual adapter before selecting drivers or antennas. The hub matches the A83D2 published port layout; confirm its underside label as well.
 
@@ -95,4 +99,5 @@ Capture with Kismet → retain the original logs locally → export a format sup
 - [Publishing this repository](publishing.md).
 
 Capture databases, GPS tracks, credentials, and local device reports belong outside Git. The included `.gitignore` excludes common capture and local configuration files.
+
 
