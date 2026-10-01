@@ -1,0 +1,19 @@
+# REFERENCE TEMPLATE ONLY — every entry is disabled until adapted.
+# Merge selected entries into the existing /etc/kismet/kismet_site.conf.
+# Replace interface names and validate channels on the actual PHY/driver.
+
+# Planned radio 1: 2.4 GHz, US example after model verification.
+# source=REPLACE_WIFI24:type=linuxwifi,name=alfa24,channels="1,2,3,4,5,6,7,8,9,10,11"
+
+# AWUS1900: limited 5 GHz starter subset, NOT all 5 GHz channels.
+# source=REPLACE_WIFI5:type=linuxwifi,name=alfa5,channels="36,40,44,48"
+
+# AXML: single-channel diagnostic only, NOT a complete 6 GHz hop list.
+# Enable only if this channel is available and monitor capture works.
+# source=REPLACE_WIFI6:type=linuxwifi,name=alfa6-test,channel_hop=false,channel=5W6e
+
+# External StarTech HCI index must be identified; hci1 is only an example.
+# source=hci1:type=linuxbluetooth,name=startech
+
+# Enable after cgps has a valid fix.
+# gps=gpsd:host=localhost,port=2947

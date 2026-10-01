@@ -1,0 +1,25 @@
+# Local settings and credentials
+.env
+.env.*
+*.local
+kismet_site.conf
+*.local.conf
+# Captures and location history
+*.kismet
+*.kismet-*
+*.pcap
+*.pcapng
+*.wiglecsv
+*.gpsxml
+*.netxml
+*.gpx
+*.kml
+*.kmz
+captures/
+logs/
+reports/
+# Editor / OS
+.DS_Store
+*.swp
+*~
+__pycache__/
